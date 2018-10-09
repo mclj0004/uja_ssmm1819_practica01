@@ -6,4 +6,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="fragment_auth_user">Usuario</string>
     <string name="fragment_button_connect">Entrar</string>
+    <string name="clave">Clave</string>
+    <string name="login_hint_pass">Escriba su contraseña</string>
+    <string name="login_hint_user">Escriba su nombre de usuario</string>
+    <string name="login_IP">Dirección</string>
+    <string name="login_hint_IP">Introduzca dirección IP</string>
+    <string name="login_puerto">Puerto</string>
+    <string name="login_hint_port">Puerto TCP servidor</string>
 </resources>

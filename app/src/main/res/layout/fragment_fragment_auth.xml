@@ -9,6 +9,78 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/fragment_auth_label_port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="155dp"
+        android:text="@string/login_puerto"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <EditText
+        android:id="@+id/fragment_auth_edit_puerto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fragment_auth_label_user"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="150dp"
+        android:layout_toEndOf="@+id/fragment_auth_label_user"
+        android:ems="10"
+        android:hint="@string/login_hint_port"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/fragment_auth_label_IP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="100dp"
+        android:text="@string/login_IP"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <EditText
+        android:id="@+id/fragment_auth_edit_IP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fragment_auth_label_user"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="100dp"
+        android:layout_toEndOf="@+id/fragment_auth_label_user"
+        android:ems="10"
+        android:hint="@string/login_hint_IP"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/fragment_auth_label_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/clave"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+    <EditText
+        android:id="@+id/fragment_auth_edit_pass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/fragment_auth_label_user"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="53dp"
+        android:layout_toEndOf="@+id/fragment_auth_label_user"
+        android:ems="10"
+        android:hint="@string/login_hint_pass"
+        android:inputType="textPassword" />
+
+    <TextView
         android:id="@+id/fragment_auth_label_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,12 +94,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/fragment_auth_label_user"
-        android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:layout_toEndOf="@+id/fragment_auth_label_user"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:hint="@string/login_hint_user"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/fragment_auth_button"

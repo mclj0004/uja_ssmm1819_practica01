@@ -29,6 +29,7 @@
         android:id="@+id/fragment"
         android:name="es.ujaen.labtelema.practica1.FragmentAuth"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_fragment_auth" />
 
 </LinearLayout>
