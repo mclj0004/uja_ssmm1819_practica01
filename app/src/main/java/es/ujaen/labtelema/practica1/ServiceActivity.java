@@ -1,5 +1,6 @@
 package es.ujaen.labtelema.practica1;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,9 +13,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class ServiceActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    public static final String PARAMETER_USER="user"
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +44,15 @@ public class ServiceActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        //Codigo practica 1
+        Intent intent = getIntent();
+        String s_user = intent.getStringExtra(PARAMETER_USER);
+        String s_pass =intent.getStringExtra("pass");
+        String s_domain =intent.getStringExtra("domain");
+        String s_port = intent.getStringExtra("port");
+        Toast.makeText(this, s_user + " " + s_pass + " " + s_domain + " " + s_port, Toast.LENGTH_LONG).show();
     }
 
     @Override
@@ -51,7 +64,7 @@ public class ServiceActivity extends AppCompatActivity
             super.onBackPressed();
         }
     }
-
+//TODO android asser studio
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

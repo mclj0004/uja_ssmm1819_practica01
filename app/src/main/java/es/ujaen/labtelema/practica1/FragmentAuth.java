@@ -98,6 +98,10 @@ public class FragmentAuth extends Fragment {
                 //Toast.makeText(getActivity(), s_user + " " + s_pass + " " + s_domain + " " + s_port, Toast.LENGTH_LONG).show();
 
                 Intent intent=new Intent(getActivity(),ServiceActivity.class);
+                intent.putExtra(ServiceActivity.PARAMETER_USER,s_user);
+                intent.putExtra("pass",s_pass);
+                intent.putExtra("domain",s_domain);
+                intent.putExtra("port",s_port);
                 startActivity(intent);
 
             }
