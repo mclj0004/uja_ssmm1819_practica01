@@ -13,4 +13,12 @@
     <string name="login_hint_IP">Introduzca dirección IP</string>
     <string name="login_puerto">Puerto</string>
     <string name="login_hint_port">Puerto TCP servidor</string>
+    <string name="mainactivity_fragmentpresent">Ya hay un fragmento</string>
+    <string name="title_activity_service">ServiceActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
 </resources>

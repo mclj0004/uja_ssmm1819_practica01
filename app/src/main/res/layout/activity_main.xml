@@ -23,13 +23,13 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text="@string/main_description"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
-    <fragment
-        android:id="@+id/fragment"
-        android:name="es.ujaen.labtelema.practica1.FragmentAuth"
+    <FrameLayout
+        android:id="@+id/main_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout="@layout/fragment_fragment_auth" />
+        android:layout_height="match_parent">
+
+    </FrameLayout>
 
 </LinearLayout>

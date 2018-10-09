@@ -17,14 +17,15 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="155dp"
         android:text="@string/login_puerto"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/fragment_auth_edit_puerto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/fragment_auth_label_user"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="28dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="150dp"
         android:layout_toEndOf="@+id/fragment_auth_label_user"
@@ -41,7 +42,8 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="100dp"
         android:text="@string/login_IP"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/fragment_auth_edit_IP"
@@ -65,16 +67,17 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="52dp"
         android:text="@string/clave"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/fragment_auth_edit_pass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/fragment_auth_label_user"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="32dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="53dp"
+        android:layout_marginTop="51dp"
         android:layout_toEndOf="@+id/fragment_auth_label_user"
         android:ems="10"
         android:hint="@string/login_hint_pass"
@@ -87,15 +90,17 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:text="@string/fragment_auth_user"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="30sp" />
 
     <EditText
         android:id="@+id/fragment_auth_edit_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignTop="@+id/fragment_auth_label_user"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="30dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="2dp"
         android:layout_toEndOf="@+id/fragment_auth_label_user"
         android:ems="10"
         android:hint="@string/login_hint_user"

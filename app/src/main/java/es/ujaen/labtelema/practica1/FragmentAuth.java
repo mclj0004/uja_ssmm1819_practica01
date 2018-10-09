@@ -1,6 +1,7 @@
 package es.ujaen.labtelema.practica1;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,6 +11,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import es.ujaen.labtelema.data.UserData;
 
 
 /**
@@ -29,6 +32,7 @@ public class FragmentAuth extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private UserData userData;
 
     private OnFragmentInteractionListener mListener;
 
@@ -70,18 +74,37 @@ public class FragmentAuth extends Fragment {
         View fragment = inflater.inflate(R.layout.fragment_fragment_auth, container, false);
 
         final EditText user = fragment.findViewById(R.id.fragment_auth_edit_name);
+        final EditText pass = fragment.findViewById(R.id.fragment_auth_edit_pass);
+        final EditText domain = fragment.findViewById(R.id.fragment_auth_edit_IP);
+        final EditText port = fragment.findViewById(R.id.fragment_auth_edit_puerto);
+
         Button connect = fragment.findViewById(R.id.fragment_auth_button);
+
 
         connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getActivity(),user.getEditableText().toString(),Toast.LENGTH_LONG).show();
+                String s_user = user.getEditableText().toString();
+                String s_pass = pass.getEditableText().toString();
+                String s_domain = domain.getEditableText().toString();
+                String s_port = port.getEditableText().toString();
+                short temp = 0;
+                try {
+                    temp = Short.parseShort(s_port);
+                }catch (NumberFormatException ex){
+                    temp=80;
+                }
+                userData = new UserData(s_user, s_pass, s_domain, Short.parseShort(s_port));
+                //Toast.makeText(getActivity(), s_user + " " + s_pass + " " + s_domain + " " + s_port, Toast.LENGTH_LONG).show();
+
+                Intent intent=new Intent(getActivity(),ServiceActivity.class);
+                startActivity(intent);
+
             }
         });
 
         return fragment;
     }
-
 
 
     @Override
