@@ -32,4 +32,39 @@ public class UserData {
         this.domain = domain;
         this.port = port;
     }
+
+
+
+    public String getUserName() {
+        return userName;
+    }
+
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getDomain() {
+        return domain;
+    }
+
+    public void setDomain(String domain) {
+        this.domain = domain;
+    }
+
+    public short getPort() {
+        return port;
+    }
+
+    public void setPort(short port) {
+        this.port = port;
+    }
 }

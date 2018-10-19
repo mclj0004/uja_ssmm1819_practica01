@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.text.Layout;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,6 +14,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ServiceActivity extends AppCompatActivity
@@ -57,6 +61,20 @@ public class ServiceActivity extends AppCompatActivity
         String s_domain =intent.getStringExtra(PARAMETER_DOMAIN);
         String s_port = intent.getStringExtra(PARAMETER_PORT);
         Toast.makeText(this, s_user + " " + s_pass + " " + s_domain + " " + s_port, Toast.LENGTH_LONG).show();
+
+        TextView user = findViewById(R.id.service_user);
+        user.setText("Usuario: "+s_user);
+
+        TextView pass = findViewById(R.id.service_pass);
+        pass.setText("Contraseña: "+s_pass);
+
+        TextView domain = findViewById(R.id.service_domain);
+        domain.setText("Dominio: "+s_domain);
+
+        TextView port = findViewById(R.id.service_port);
+        port.setText("Puerto: "+s_port);
+
+
     }
 
     @Override
@@ -115,4 +133,6 @@ public class ServiceActivity extends AppCompatActivity
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }

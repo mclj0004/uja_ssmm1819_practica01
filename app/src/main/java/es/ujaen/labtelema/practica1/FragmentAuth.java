@@ -142,4 +142,21 @@ public class FragmentAuth extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
+
+    /**
+     * Para guardar los datos del usuario en memoria
+     * @param outState
+     */
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+
+        outState.putString("user",userData.getUserName());
+        outState.putString("pass",userData.getPassword());
+        outState.putString("domain",userData.getDomain());
+        outState.putShort("port",userData.getPort());
+
+        super.onSaveInstanceState(outState);
+    }
 }

@@ -34,4 +34,7 @@ public class MainActivity extends AppCompatActivity implements FragmentAuth.OnFr
     public void onFragmentInteraction(Uri uri) {
 
     }
+
+
+
 }
