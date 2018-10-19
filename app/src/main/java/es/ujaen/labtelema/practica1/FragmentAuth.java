@@ -94,7 +94,7 @@ public class FragmentAuth extends Fragment {
                 }catch (NumberFormatException ex){
                     temp=80;
                 }
-                userData = new UserData(s_user, s_pass, s_domain, Short.parseShort(s_port));
+                userData = new UserData(s_user, s_pass, s_domain, temp);
                 //Toast.makeText(getActivity(), s_user + " " + s_pass + " " + s_domain + " " + s_port, Toast.LENGTH_LONG).show();
 
                 Intent intent=new Intent(getActivity(),ServiceActivity.class);

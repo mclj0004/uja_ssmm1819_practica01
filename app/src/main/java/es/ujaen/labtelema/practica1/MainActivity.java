@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements FragmentAuth.OnFr
             ft.add(R.id.main_container,fragment,"login");
             ft.commit();
         }else{
-            Toast.makeText(this,getString(R.string.mainactivity_fragmentpresent),Toast.LENGTH_LONG).show();
+            //Toast.makeText(this,getString(R.string.mainactivity_fragmentpresent),Toast.LENGTH_LONG).show();
         }
 
     }

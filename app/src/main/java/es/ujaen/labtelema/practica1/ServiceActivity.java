@@ -18,7 +18,11 @@ import android.widget.Toast;
 public class ServiceActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    public static final String PARAMETER_USER="user"
+    public static final String PARAMETER_USER="user";
+    public static final String PARAMETER_PASS="pass";
+    public static final String PARAMETER_DOMAIN="domain";
+    public static final String PARAMETER_PORT="port";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +53,9 @@ public class ServiceActivity extends AppCompatActivity
         //Codigo practica 1
         Intent intent = getIntent();
         String s_user = intent.getStringExtra(PARAMETER_USER);
-        String s_pass =intent.getStringExtra("pass");
-        String s_domain =intent.getStringExtra("domain");
-        String s_port = intent.getStringExtra("port");
+        String s_pass =intent.getStringExtra(PARAMETER_PASS);
+        String s_domain =intent.getStringExtra(PARAMETER_DOMAIN);
+        String s_port = intent.getStringExtra(PARAMETER_PORT);
         Toast.makeText(this, s_user + " " + s_pass + " " + s_domain + " " + s_port, Toast.LENGTH_LONG).show();
     }
 
