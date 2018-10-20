@@ -73,6 +73,8 @@ public class FragmentAuth extends Fragment {
         // Inflate the layout for this fragment
         View fragment = inflater.inflate(R.layout.fragment_fragment_auth, container, false);
 
+        //Buscamos las vistas de los EditText (donde introducimos los datos) y el botón por el id
+
         final EditText user = fragment.findViewById(R.id.fragment_auth_edit_name);
         final EditText pass = fragment.findViewById(R.id.fragment_auth_edit_pass);
         final EditText domain = fragment.findViewById(R.id.fragment_auth_edit_IP);
@@ -80,15 +82,19 @@ public class FragmentAuth extends Fragment {
 
         Button connect = fragment.findViewById(R.id.fragment_auth_button);
 
-
+/*
+ Al pulsar el botón del fragmento de autenticación se recogen los parámetros introducidos en los
+ edit text y se pasan a la actividad Service Activity mediante un intent.
+ */
         connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 String s_user = user.getEditableText().toString();
                 String s_pass = pass.getEditableText().toString();
                 String s_domain = domain.getEditableText().toString();
                 String s_port = port.getEditableText().toString();
-                short temp = 0;
+                short temp;
                 try {
                     temp = Short.parseShort(s_port);
                 }catch (NumberFormatException ex){
@@ -146,7 +152,7 @@ public class FragmentAuth extends Fragment {
 
     /**
      * Para guardar los datos del usuario en memoria
-     * @param outState
+     * @param outState objeto tipo bundle donde se guardan los parámetros
      */
     @Override
     public void onSaveInstanceState(Bundle outState) {

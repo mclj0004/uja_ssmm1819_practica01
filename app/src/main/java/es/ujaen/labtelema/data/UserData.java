@@ -1,10 +1,10 @@
 package es.ujaen.labtelema.data;
 
 public class UserData {
-    String userName="";
-    String password="";
-    String domain="";
-    short port=0;
+    private String userName;
+    private String password;
+    private String domain;
+    private short port;
 
     /**
      * Constructor por defecto
@@ -67,4 +67,5 @@ public class UserData {
     public void setPort(short port) {
         this.port = port;
     }
+
 }
