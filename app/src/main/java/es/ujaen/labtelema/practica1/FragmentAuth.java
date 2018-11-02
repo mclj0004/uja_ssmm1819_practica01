@@ -103,11 +103,11 @@ public class FragmentAuth extends Fragment {
                 userData = new UserData(s_user, s_pass, s_domain, temp);
                 //Toast.makeText(getActivity(), s_user + " " + s_pass + " " + s_domain + " " + s_port, Toast.LENGTH_LONG).show();
 
-                Intent intent=new Intent(getActivity(),ServiceActivity.class);
+                Intent intent=new Intent(getActivity(), ServiceActivity.class);
                 intent.putExtra(ServiceActivity.PARAMETER_USER,s_user);
-                intent.putExtra("pass",s_pass);
-                intent.putExtra("domain",s_domain);
-                intent.putExtra("port",s_port);
+                intent.putExtra(ServiceActivity.PARAMETER_PASS,s_pass);
+                intent.putExtra(ServiceActivity.PARAMETER_DOMAIN,s_domain);
+                intent.putExtra(ServiceActivity.PARAMETER_PORT,s_port);
                 startActivity(intent);
 
             }
@@ -158,11 +158,12 @@ public class FragmentAuth extends Fragment {
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
 
-        outState.putString("user",userData.getUserName());
-        outState.putString("pass",userData.getPassword());
-        outState.putString("domain",userData.getDomain());
-        outState.putShort("port",userData.getPort());
+        if(userData!=null) {
+            outState.putString(ServiceActivity.PARAMETER_USER, userData.getUserName());
+            outState.putString(ServiceActivity.PARAMETER_PASS, userData.getPassword());
+            outState.putString(ServiceActivity.PARAMETER_DOMAIN, userData.getDomain());
+            outState.putShort(ServiceActivity.PARAMETER_PORT, userData.getPort());
+        }
 
-        super.onSaveInstanceState(outState);
     }
 }

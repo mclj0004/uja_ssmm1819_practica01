@@ -19,14 +19,16 @@ public class MainActivity extends AppCompatActivity implements FragmentAuth.OnFr
         Log.d("ARRANCANDO","La aplicación móvil se está iniciando");
         FragmentManager fm =getSupportFragmentManager();
         Fragment temporal=fm.findFragmentById(R.id.main_container);
+
         if(temporal==null){
             FragmentTransaction ft = fm.beginTransaction();
             FragmentAuth fragment=FragmentAuth.newInstance("","");
             ft.add(R.id.main_container,fragment,"login");
             ft.commit();
-        }else{
-            //Toast.makeText(this,getString(R.string.mainactivity_fragmentpresent),Toast.LENGTH_LONG).show();
         }
+        //else{
+            //Toast.makeText(this,getString(R.string.mainactivity_fragmentpresent),Toast.LENGTH_LONG).show();
+        //}
 
     }
 
